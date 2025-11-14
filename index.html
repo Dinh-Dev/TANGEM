@@ -7,15 +7,15 @@
 <title>Linh ơi 💖</title>
 </head>
 <body>
-
-  <h2>
+<h1 class="fade-text">Linh ơi!!!💖</h1>
+  <h2 id="typewriter">
     Anh sẽ luôn là bờ vai vững chắc để em có thể tựa vào...  
     Em có tin anh chứ? 💞  
-    Em có chịu cho anh cơ hội để anh làm bờ vai vững chắc hay không?  
-    Linh ơi... Anh luôn muốn nói rằng —
+    Em có chịu cho anh cơ hội để anh làm bờ vai vững chắc cho em không?  
+    Linh ơi... Anh luôn muốn nói rằng 
   </h2>
 
-  <h1>Anh yêu em rất nhiều 💖</h1>
+  <h1 class="glow-text">Anh yêu em rất nhiều 💖</h1>
 
   <script>
     function createHeart() {
@@ -63,6 +63,19 @@
 
     // Sau đó bay liên tục
     setInterval(createHeart, 150);
+    // Hiệu ứng gõ chữ
+    const typewriterElement = document.getElementById('typewriter');
+    const text = typewriterElement.textContent;
+    typewriterElement.textContent = '';
+    let index = 0;
+    function typeWriter() {
+      if (index < text.length) {
+        typewriterElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 110);
+      }
+    }
+    typeWriter();
   </script>
 </body>
 </html>
