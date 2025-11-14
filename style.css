@@ -36,7 +36,16 @@
     0% { text-shadow: 0 0 20px #ff6699, 0 0 40px #ff0033; }
     100% { text-shadow: 0 0 60px #ff1a4d, 0 0 120px #ff0033; }
   }
+.fade-text {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    font-size: 28px;
+}
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
   svg.heart {
     position: absolute;
     fill: #ff002b;
@@ -62,3 +71,41 @@
       transform: translate(var(--endX), var(--endY)) scale(1.2);
     }
   }
+  #text {
+    font-size: 28px;
+    white-space: pre-line;
+}
+#typewriter {
+  font-size: 1.6em;
+  max-width: 900px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+/* chữ từ tự hiện ra cuối cùng*/
+.glow-text {
+        font-size: 50px;
+        color: #ff1a1a; /* đỏ tình yêu */
+        opacity: 0;
+        animation: showUp 0.6s ease-out forwards;
+        animation-delay: 25s; /* thời gian chờ trước khi xuất hiện */
+
+        /* ánh sáng neon đỏ */
+        text-shadow:
+            0 0 10px #ff1a1a,
+            0 0 25px #ff0000,
+            0 0 40px #ff0000,
+            0 0 60px #ff0000,
+            0 0 80px #ff0000;
+    }
+
+    @keyframes showUp {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+            text-shadow: none;
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
