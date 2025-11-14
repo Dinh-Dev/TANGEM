@@ -7,6 +7,9 @@
 <title>Linh ơi 💖</title>
 </head>
 <body>
+  <audio id="autoMusic" autoplay muted>
+    <source src="/TANGEM/music_yeu.mp4" type="audio/mp4">
+  </audio>
 <h1 class="fade-text">Linh ơi!!!💖</h1>
   <h2 id="typewriter">
     Anh sẽ luôn là bờ vai vững chắc để em có thể tựa vào...  
@@ -76,6 +79,16 @@
       }
     }
     typeWriter();
+     // Khi trang load xong
+    window.addEventListener("load", function () {
+        const audio = document.getElementById("autoMusic");
+
+        // Bỏ mute sau 1 giây -> đa số trình duyệt sẽ cho phép phát âm thanh
+        setTimeout(() => {
+            audio.muted = false;
+            audio.play();
+        }, 1000);
+    });
   </script>
 </body>
 </html>
