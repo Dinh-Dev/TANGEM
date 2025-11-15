@@ -50,6 +50,7 @@ const typewriterElement = document.getElementById("typewriter");
 const finalText = document.getElementById("finalText");
 
 envelope.onclick = () => {
+  document.getElementById("openText").style.display = "none";
   envelope.style.transform = "scale(0.7)";
   envelope.style.opacity = "0";
   setTimeout(()=>envelope.style.display="none", 500);
